@@ -42,6 +42,15 @@ Health check:
 curl http://localhost:8642/health
 ```
 
+## Open a shell in the running container
+
+The `hermes` command exists only inside the container, so run Hermes commands through `docker exec`:
+
+```bash
+docker exec -it hermes-sandbox bash    # open a shell; type exit to leave
+docker exec -it hermes-sandbox hermes setup   # or run one command directly
+```
+
 ## Maintenance
 
 ```bash
